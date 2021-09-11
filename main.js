@@ -83,3 +83,33 @@ $(document).ready(function(){
     });
 
 });
+function displayCurrentQuestion(){
+    console.log("In display current Question");
+
+    var question = questions[currentQuestion].question;
+    var questionClass = $(document).find(".quizContainer > .question");
+    var choiceList = $(document).find(".quizContainer > .choiceList");
+    var numChoices = questions[currentQuestion].choices.length;
+
+    $(questionClass).text(question);
+
+    $(choiceList).find("li").remove();
+
+    var choice;
+    for(i = 0;i < numChoices; i++){
+        choice = questions[currentQuestion].choices[i];
+        $('<li><input type="radio" value='+ i +'name="dyradio" />' + choice + '</li>').appendTo(choiceList);
+    }
+}
+function resetQuiz(){
+    currentQuestion = 0;
+    correctAnswers = 0;
+    hideScore();
+}
+function displayScore(){
+    $(document).find(".quizContainer > .result").text("You Scored: " + correctAnswers + " out of: " + questions.length);
+    $(document).find(".quizContainer > .result").show();
+}
+function hideScore(){
+    $(document).find(".result").hide();
+}

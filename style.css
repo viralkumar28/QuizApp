@@ -48,9 +48,9 @@ p{
     height: auto;
     margin: auto;
     border-radius: 6px;
-    background-color: #cc2177;
+    
     text-align: center;
-    color: #af10cf;    
+    color: whitesmoke;    
 }
 .quizMessage{
     background-color: peachpuff;
@@ -64,7 +64,7 @@ p{
 }
 .choiceList{
     font-family: Courier, serif;
-    color: blueviolet;
+    color: whitesmoke;
 }
 .result{
     width: 30%;
