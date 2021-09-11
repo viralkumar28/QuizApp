@@ -62,3 +62,17 @@ p{
     font-family: 'Robot', sans-serif;
     color: royalblue;
 }
+.choiceList{
+    font-family: Courier, serif;
+    color: blueviolet;
+}
+.result{
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: 'Robot', sans-serif;
+}
