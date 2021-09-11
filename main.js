@@ -47,3 +47,39 @@ var questions=[{
     choices:["2","3","1","6"],
     correctAnswer:1
 }];
+var currentQuestion = 0;
+var correctAnswers = 0;
+var quizOver = false;
+$(document).ready(function(){
+    displayCurrentQuestion();
+    $(this).find(".quizMessage").hide();
+    $(this).find(".nextButton").on("click",function(){
+        if(!quizOver){
+            value = $("input[type='radio']:checked").val();
+            if(value == undefined){
+                $(document).find(".quizMessage").text("Please select an answer");
+                $(document).find(".quizMessage").show();
+            }else{
+                $(document).find(".quiZMessage").hide();
+                if(value == questions[currentQuestion].correctAnswer){
+                    correctAnswers++;
+                }
+                currentQuestion++;
+                if(currentQuestion < questions.length){
+                    displayCurrentQuestion();
+                }else{
+                    displayScore();
+                    $(document).find(".nextButton").text("Play Again?");
+                    quizOver = true;
+                }
+            }
+        }else{
+            quizOver = false;
+            $(document).find(".nextButton").text("Next Question");
+            resetQuiz();
+            displayCurrentQuestion();
+            hideScore();
+        }
+    });
+
+});
