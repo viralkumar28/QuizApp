@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 h1{
     font-family: 'Robot', sans-serif;
     text-align: center;
@@ -15,4 +15,16 @@ input[type=radio]{
     border: 0px;
     width: 20px;
     height: 2em;
+}
+p{
+    font-family: 'Robot', sans-serif;
+}
+.quizContainer{
+    background-color: palevioletred;
+    border-radius: 8px;
+    width: 75%;
+    margin: auto;
+    margin-top: 190px;
+    padding-top: 5px;
+    position: relative;
 }
