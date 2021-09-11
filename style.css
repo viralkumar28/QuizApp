@@ -52,3 +52,13 @@ p{
     text-align: center;
     color: #af10cf;    
 }
+.quizMessage{
+    background-color: peachpuff;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-family: 'Robot', sans-serif;
+    color: royalblue;
+}
